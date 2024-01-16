@@ -13,7 +13,10 @@ const Hamburger = () => {
 
   return (
     <div>
-      <div className={`${isopen ? cross : hamburger}`} onClick={ChangeHanurger}>
+      <div
+        className={`${isopen ? cross : hamburger} z-0`}
+        onClick={ChangeHanurger}
+      >
         <div
           className={`${line}  ${
             isopen ? "rotate-45 translate-y-[4px]   " : ""
