@@ -14,7 +14,7 @@ const Hamburger = () => {
   return (
     <div>
       <div
-        className={`${isopen ? cross : hamburger} z-0`}
+        className={`${isopen ? cross : hamburger} `}
         onClick={ChangeHanurger}
       >
         <div
