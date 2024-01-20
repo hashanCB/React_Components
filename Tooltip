@@ -23,7 +23,7 @@ const Tooltip = ({ children, content }) => {
 
       {tooltips && (
         <div className="bg-[#494b4e] text-white p-3 whitespace-nowrap text-[12px] tracking-wider rounded absolute transform translate-y-2">
-          {content}
+         <div dangerouslySetInnerHTML={{ __html: content }} />
         </div>
       )}
     </div>
