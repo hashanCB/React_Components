@@ -1,0 +1,33 @@
+import React, { useState, useEffect } from "react";
+
+const Tooltip = ({ children, content }) => {
+  const [tooltips, setTooltips] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTooltips(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [tooltips]);
+
+  return (
+    <div className="relative">
+      <div
+        className="font-bold hover:bg-[#5f6368]/20 p-4 rounded-full cursor-pointer tooltip"
+        onMouseEnter={() => setTooltips(true)}
+        onMouseLeave={() => setTooltips(false)}
+      >
+        {children}
+      </div>
+
+      {tooltips && (
+        <div className="bg-[#494b4e] text-white p-3 whitespace-nowrap text-[12px] tracking-wider rounded absolute transform translate-y-2">
+          {content}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Tooltip;
