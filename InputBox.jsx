@@ -23,7 +23,7 @@ const InputBox = ({ placeholderText }) => {
       onFocus={handleFocus}
       onBlur={handleBlur}
     >
-      {/* Input field */}
+      {/* Input field ONFOCUSE MEAING CLICK and inblur meaing  out of inputbox click */}
       <input
         type="email"
         onFocus={handleFocus}
